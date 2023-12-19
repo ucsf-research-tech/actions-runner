@@ -3,6 +3,8 @@ FROM ghcr.io/actions/actions-runner:latest
 USER root
 
 RUN apt update
-RUN apt install curl git unzip jq krb5-user ansible python3-winrm python3-kerberos -y
+RUN apt install curl git unzip jq  -y
+RUN apt install krb5-user libkrb5-dev python3-pip  -y
+RUN pip3 install --include-deps ansible
 
 USER runner
