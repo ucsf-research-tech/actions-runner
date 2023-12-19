@@ -4,7 +4,7 @@ USER root
 
 RUN apt update
 RUN apt install curl git unzip jq  -y
-RUN apt install krb5-user libkrb5-dev python3-pip  -y
-RUN pip3 install --include-deps ansible
+RUN apt install ansible krb5-user libkrb5-dev python3-pip  -y
+RUN pip3 install pykerberos==1.2.4
 
 USER runner
