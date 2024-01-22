@@ -12,6 +12,6 @@ RUN DOCKER_CONFIG=/usr/local/lib/docker
 RUN mkdir -p $DOCKER_CONFIG/cli-plugins
 RUN curl -SL https://github.com/docker/compose/releases/download/v2.24.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 RUN chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
-RUN sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+RUN chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 
 USER runner
