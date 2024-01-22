@@ -2,7 +2,6 @@ FROM ghcr.io/actions/actions-runner:latest
 
 USER root
 
-RUN for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 RUN apt-get update
 RUN apt-get install ca-certificates curl gnupg
 RUN install -m 0755 -d /etc/apt/keyrings
