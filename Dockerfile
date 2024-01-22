@@ -3,7 +3,7 @@ FROM ghcr.io/actions/actions-runner:latest
 USER root
 
 RUN apt-get update
-RUN apt-get install ca-certificates curl gnupg
+RUN apt-get install ca-certificates curl gnupg -y
 RUN install -m 0755 -d /etc/apt/keyrings
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 RUN chmod a+r /etc/apt/keyrings/docker.gpg
