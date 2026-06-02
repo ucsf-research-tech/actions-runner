@@ -5,7 +5,7 @@ USER root
 RUN apt-get update
 RUN apt-get install curl git zip unzip rsync jq  -y
 RUN apt-get install ansible krb5-user gcc python3-dev libkrb5-dev python3-kerberos python3-passlib python3-pip -y
-RUN pip3 install pywinrm[kerberos]
+RUN pip install pywinrm[kerberos]
 #RUN pip3 install pykerberos==1.2.4
 #RUN pip3 install passlib
 RUN mkdir -p /usr/local/lib/docker/cli-plugins
