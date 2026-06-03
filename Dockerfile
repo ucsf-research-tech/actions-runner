@@ -4,13 +4,6 @@ USER root
 
 RUN apt-get update
 RUN apt-get install curl git zip unzip rsync jq  -y
-#RUN apt-get install ansible krb5-user gcc python3-dev libkrb5-dev python3-pip python3-venv pipx -y
-#RUN pipx install pywinrm[kerberos]
-##RUN pipx install pykerberos
-#RUN pipx install passlib
-
-#RUN apt-get update
-#RUN apt-get install curl git zip unzip rsync jq  -y
 RUN apt-get install ansible krb5-user libkrb5-dev python3-pip  -y
 RUN pip3 install pykerberos==1.2.4 --break-system-packages
 RUN pip3 install passlib --break-system-packages
