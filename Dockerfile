@@ -3,7 +3,7 @@ FROM ghcr.io/actions/actions-runner:latest
 USER root
 
 RUN apt-get update
-RUN apt-get install curl git zip unzip rsync jq  -y
+RUN apt-get install curl git zip unzip rsync jq nodejs npm  -y
 RUN apt-get install ansible krb5-user libkrb5-dev python3-pip  -y
 RUN pip3 install pykerberos==1.2.4 --break-system-packages
 RUN pip3 install passlib --break-system-packages
